@@ -1,0 +1,89 @@
+{% extends "u_base.html" %}
+
+{% block title %}TheCharity | Home{% endblock %}
+
+{% block content %}
+    <!-- Main Banner -->
+    <section id="banner">
+        <div class="carousel">
+            <div class="carousel-images">
+                <img class="slide" src="{{ url_for('static', filename='images/hero1.jpeg') }}" alt="Support our cause">
+                <img class="slide" src="{{ url_for('static', filename='images/hero2.jpeg') }}" alt="Support our cause">
+                <img class="slide" src="{{ url_for('static', filename='images/hero3.jpeg') }}" alt="Support our cause">
+            </div>
+            <button class="arrow-btn left-arrow" onclick="prevSlide()">&#10094;</button>
+            <button class="arrow-btn right-arrow" onclick="nextSlide()">&#10095;</button>
+        </div>
+        <div class="banner-content">
+            <h1>Donate for a Better World</h1>
+            <p>Help us create a positive impact across the globe.</p>
+            <button type="button" onclick="location.href='{{ url_for('udonate') }}'">Donate Now</button>
+            <button type="button" onclick="location.href='{{ url_for('uabout') }}'">Read More</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2>About Us</h2>
+                <p>At ImpactWave, we believe that every contribution, no matter how big or small, has the power to create lasting change. Our platform connects compassionate individuals with meaningful causes, making it easy to support global relief efforts, humanitarian projects, and charitable initiatives. With a commitment to transparency and trust, we ensure that your donations go directly towards making a real impact. From providing clean water to those in need, supporting education, and delivering emergency aid, our mission is to create a wave of positive change across the world. Join us in making a difference, one step at a time.</p>
+                <button type="button" onclick="location.href='{{ url_for('uabout') }}'">Know More About Us</button>
+            </div>
+            <div class="about-image">
+                <img src="{{ url_for('static', filename='images/about_section.jpg') }}" alt="About Us">
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events">
+        <h2>Events</h2>
+        <div class="event-container">
+            <div class="event-box" onclick="location.href='{{ url_for('uevents') }}'">
+                <img src="{{ url_for('static', filename='images/clean-drive.jpg') }}" alt="Event 1">
+                <div class="event-description">
+                    <h3> "Community clean-up drive"</h3>
+                    <p>"Join our community clean-up drive and help make a difference! Together, we'll transform the place."</p>
+                    
+                </div>
+            </div>
+            <div class="event-box" onclick="location.href='{{ url_for('uevents') }}'">
+                <img src="{{ url_for('static', filename='images/teaching.jpg') }}" alt="Event 2">
+                <div class="event-description">
+                    <h3> "Teaching and Tutoring Program"</h3>
+                    <p>"Make a difference by sharing your knowledge and time with children in underserved communities."</p>
+                    
+                </div>
+            </div>
+            <div class="event-box" onclick="location.href='{{ url_for('uevents') }}'">
+                <img src="{{ url_for('static', filename='images/refugee.jpg') }}" alt="Event 3">
+                <div class="event-description">
+                    <h3>"Refuge support program"</h3>
+                    <p>"Be a part of our refugee support program where we strive to empower and uplift displaced families."</p>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section id="quote">
+        <div class="quote-content">
+            <blockquote>"You have not lived today until you have done something for someone who can never repay you." — John Bunyan</blockquote>
+            <button type="button" onclick="location.href='{{ url_for('udonate') }}'">Donate Now</button>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <!-- Contact Us Section -->
+<section id="contact">
+    <div class="contact-content">
+        <h2>Contact Us</h2>
+        <p>If you have any questions or need further information, feel free to reach out to us. We are here to assist you with any inquiries and support you may need. Your feedback and queries are important to us, and we aim to provide prompt and helpful responses.</p>
+        <button type="button" onclick="location.href='{{ url_for('ucontact') }}'">Get In Touch</button>
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

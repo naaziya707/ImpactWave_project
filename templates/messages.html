@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Messages</h1>
+    <div class="messages-container">
+        {% if messages %}
+            <div class="messages-grid">  <!-- Added grid container -->
+                {% for message in messages %}
+                    <div class="message-box">
+                        <div class="message-item">
+                            <span class="label">ID:</span>
+                            <span class="value">{{ message[0] }}</span>
+                        </div>
+                        <div class="message-item">
+                            <span class="label">Name:</span>
+                            <span class="value">{{ message[1] }}</span>
+                        </div>
+                        <div class="message-item">
+                            <span class="label">Email:</span>
+                            <span class="value">{{ message[2] }}</span>
+                        </div>
+                        <div class="message-item">
+                            <span class="label">Message:</span>
+                            <span class="value">{{ message[3] }}</span>
+                        </div>
+                        <div class="message-item">
+                            <span class="label">Submitted At:</span>
+                            <span class="value">{{ message[4] }}</span> <!-- This will now show just the date -->
+                        </div>
+                        <form action="{{ url_for('delete_message', id=message[0]) }}" method="POST">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <p>No messages found</p>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,1329 @@
+/* General body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Centered form container styling */
+.form-container {
+    width: 100%;
+    max-width: 500px; /* Adjust width as needed */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    padding: 40px; /* Reduced padding for better fitting */
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Headings styling */
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+/* Label styling */
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* Input styling */
+input[type="text"], 
+input[type="email"], 
+input[type="password"] {
+    width: 100%; /* Set to 100% to ensure it fits the container */
+    height: 40px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background: linear-gradient(171.8deg, rgb(3, 61, 80) 13.5%, rgb(3, 32, 48) 78.6%);
+}
+
+
+/* General Styles */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px;
+}
+
+.logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    text-decoration: underline;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-right button {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%); /* Metallic shiny blue */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    margin-left: 15px; /* Align with original snippet */
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-right button:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Darker gradient on hover */
+}
+
+.logout-icon {
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.logout-icon:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Change color on hover if needed */
+}
+
+/* Main content styling to ensure content does not overlap with the header */
+main {
+    padding-top: 60px; /* Adjust based on header height */
+}
+
+
+
+/*===================================================================*/
+
+/* Main Banner */
+/* Banner Section */
+#banner {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-images {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 1;
+}
+
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.banner-content p {
+    color: #fff;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Updated button style: rounded, metallic blue */
+.banner-content button {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%);/* Metallic shiny blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for 3D effect */
+    transition: all 0.3s ease;
+}
+
+.banner-content button:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Hover effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.arrow-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* Quote Section */
+#quote {
+    position: relative;
+    background: #333;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+}
+
+#quote .quote-content blockquote {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Updated button style: rounded, metallic blue */
+#quote .quote-content button {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%); /* Metallic shiny blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: inline-block;
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Slight shadow for 3D effect */
+    transition: all 0.3s ease;
+}
+
+#quote .quote-content button:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Hover effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/*about us section*/
+#about {
+    background-color: #f9f9f9; /* Light background for contrast */
+    padding: 60px 30px; /* Padding around the section */
+    text-align: center; /* Center align text */
+}
+
+.about-content {
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Column layout on smaller screens */
+    align-items: center; /* Center align items */
+    gap: 20px; /* Space between elements */
+}
+
+.about-text {
+    max-width: 800px; /* Limit text width */
+    margin-bottom: 20px; /* Space below text */
+}
+
+.about-text h2 {
+    text-align: center;
+    font-size: 2em; /* Large font size for heading */
+    margin-bottom: 20px; /* Space below heading */
+}
+
+.about-text p {
+    font-size: 1.1em; /* Slightly larger font size for readability */
+    line-height: 1.6; /* Line height for better readability */
+    margin-bottom: 20px; /* Space below paragraph */
+}
+
+.about-text button { 
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%); /* Metallic shiny blue */
+    color: white;/* Button text color */
+    border: none; /* Remove border */
+    padding: 10px 20px; /* Button padding */
+    font-size: 1em; /* Button text size */
+    cursor: pointer; /* Pointer cursor on hover */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+.about-text button:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Darker button color on hover */
+}
+
+.about-image img {
+    max-width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for image */
+}
+
+/* Events Section Styling */
+#events {
+    padding: 80px 60px;
+    background-color: #f9f9f9; /* Light background color for contrast */
+}
+
+#events h2 {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 2.3em;
+    margin-bottom: 20px;
+    color: black; /* Dark text for readability */
+}
+
+.event-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.event-box {
+    flex: 1 1 calc(33.333% - 20px); /* 3 boxes in a row with space between */
+    box-sizing: border-box;
+    background-color: #333; /* Dark background for boxes */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+    cursor: pointer; /* Cursor to indicate clickable */
+    position: relative; /* For absolute positioning of the overlay and description */
+    padding: 0; /* Remove default padding */
+    height: 300px; /* Fixed height for square shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0); /* Initial box shadow (none) */
+}
+
+.event-box:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.6); /* Blue border glow on hover */
+}
+
+.event-box img {
+    width: 100%;
+    height: 100%; /* Ensure the image covers the square */
+    object-fit: cover; /* Ensure the image covers the box without distortion */
+    display: block; /* Remove any unwanted gaps */
+    position: absolute; /* Make sure the image is positioned absolutely */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Place image behind the overlay */
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay with more opacity */
+    z-index: 2; /* Ensure overlay is on top of the image */
+}
+
+.event-description {
+    padding: 15px;
+    color: #fff; /* White text for readability */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
+    color: #fff; /* White text on dark background */
+    text-align: center; /* Center text within the description */
+    z-index: 3; /* Ensure description is above the overlay */
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.event-description h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.event-description p {
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.event-description button {
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text on button */
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px; /* Space above button */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.event-description button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/*QUOTE */
+#quote {
+    padding: 60px 30px;
+    background: radial-gradient(401px at 50.6% -0.3%, rgba(255, 255, 255, 0.31) 1.2%, rgb(36, 212, 219) 100.2%);
+    color: black; /* Blue text for contrast */
+    text-align: center;
+}
+
+#quote blockquote {
+    font-size: 1.5em;
+    margin: 0;
+    padding: 0 20px;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+#quote button {
+    background-color: #007bff; /* Blue button */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 20px 30px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px; /* Space above button */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+}
+
+#quote button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    color: #fff; /* White text on hover */
+}
+
+/* Contact Us Section Styling */
+#contact {
+    padding: 60px 40px;
+    background: white /* Light background color for a clean look */ /* Center align text */
+}
+
+#contact h2 {
+    font-size: 2em;
+    color: black; /* Dark text for readability */
+    margin-bottom: 20px;
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-content p {
+    font-size: 1.2em;
+    color: black; /* Slightly lighter text color */
+    margin-bottom: 20px;
+    max-width: 600px; /* Limit text width for better readability */
+}
+
+.contact-content button {
+    background: linear-gradient(to right, #007bff, #0056b3); /* Gradient blue background */
+    color: #fff; /* White text */
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.contact-content button:hover {
+    background: linear-gradient(to right, #0056b3, #004080); /* Darker blue gradient on hover */
+}
+
+/*================================================================*/
+/* About Us Page */
+/* Full-width Section Styling of the top banner */
+#about-us {
+    width: 100vw; /* Full width of the viewport */
+    box-sizing: border-box; /* Include padding in width and height */
+    display: flex;
+    flex-direction: column;
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+/* Header Banner Styling */
+#about-us .heading {
+    position: relative;
+    width: 100%; /* Ensure the banner covers full width */
+    height: 190px; /* Set a height for the banner */
+    background-image: url('../images/header-banner.jpg'); /* Replace with your banner image */
+    background-size: cover; /* Ensure the banner covers the entire area */
+    background-position: center; /* Center the background image */
+    display: flex;
+    align-items: center; /* Center the text vertically */
+    justify-content: center; /* Center the text horizontally */
+    margin: 0; /* Remove any margin */
+}
+
+#about-us .heading h3 {
+    text-align: center;
+    font-size: 48px;
+    color: black; /* White text for contrast */
+    margin: 0; /* Remove margins */
+    text-decoration: underline;
+    position: relative;
+    z-index: 1; /* Ensure the text appears above the banner */
+}
+/* About Us Section */
+/* #about-us Section Styling */
+#about-us {
+    margin-bottom: 60px;
+}
+
+/* Flex layout for both Mission and Vision */
+.flex, .flexx {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 20px; /* Space between sections */
+}
+
+/* Text content styling */
+.text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.2em;
+    flex: 1;
+    padding: 20px;
+    text-align: center; /* Center-align text */
+    margin-right: 50px;
+}
+
+.text h2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5em; /* Larger font size for the mission heading */
+    font-weight: bold; /* Bold font for the mission heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+.text h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2.5em; /* Font size for the vision heading */
+    font-weight: bold; /* Bold font for the vision heading */
+    margin-bottom: 10px; /* Space below heading */
+}
+
+/* Image styling */
+.image {
+    flex: 1;
+    padding: 20px;
+    margin-left: 30px; /* Additional margin to move the mission image further to the right */
+}
+
+.image img {
+    width: 86%;
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Mission section: Image on the right */
+.mission .flex {
+    flex-direction: row; /* Text on the left, Image on the right */
+}
+
+/* Vision section: Image on the left */
+.vision .flexx {
+    flex-direction: row; /* Image on the left, Text on the right */
+}
+
+/* How Your Money is Spent Section */
+.how-your-money {
+    margin-left: 30px;
+    margin-bottom: 60px; /* Adjust space as needed */
+}
+.how-your-money h1{
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 60px; /* Adjust space as needed */
+}
+
+.money-spent-list {
+    font-size: 1.1em;
+    list-style-type: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 20px 0; /* Add margin for spacing */
+}
+.how-your-money p{
+    font-size: 1.1em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    flex: 1;
+    padding: 20px;
+    margin-right: 50px;
+}
+
+.money-spent-list > li {
+    margin-bottom: 20px; /* Space between main list items */
+    font-size: 1.1em; /* Slightly larger font for main categories */
+}
+
+.money-spent-list > li > ul {
+    list-style-type: disc; /* Use bullet points for sub-items */
+    padding-left: 20px; /* Indent sub-items */
+    margin-top: 5px; /* Space above sub-items */
+}
+
+.money-spent-list li strong {
+    font-weight: bold; /* Bold for category headings */
+    color: #2c3e50; /* Darker color for emphasis */
+}
+
+.money-spent-list li ul li {
+    font-size: 0.95em; /* Slightly smaller font for details */
+    color: #34495e; /* A softer color for readability */
+}
+
+
+/* FAQ Section */
+.faq-item {
+    margin-bottom: 15px; /* Space between FAQ items */
+    margin-left: 20px;
+    margin-right: 10px;
+}
+
+.faq-question {
+    display: flex;
+    justify-content: space-between; /* Aligns items to space between */
+    align-items: center; /* Vertically centers items */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    padding: 3px;
+    border: 1px solid #ccc; /* Optional: adds a border */
+    border-radius: 5px; /* Optional: rounds corners */
+    background-color: #f9f9f9; /* Optional: background color */
+}
+
+.faq-answer {
+    padding: 10px;
+    border: 1px solid #ccc; /* Optional: adds a border */
+    border-radius: 5px; /* Optional: rounds corners */
+    margin-top: 5px; /* Space above answer */
+}
+
+.toggle-icon {
+    margin-left: 10px; /* Space between text and icon */
+    font-size: 18px; /* Size of the arrow */
+    transition: transform 0.3s; /* Smooth transition for rotation */
+}
+
+/* Optional: Rotate the arrow when the answer is visible */
+.faq-question.active .toggle-icon {
+    transform: rotate(180deg); /* Rotates arrow to point upwards */
+}
+
+
+/*===================================================================*/
+/* EVENTS PAGE STYLING */
+
+/* Banner Styling */
+#events-banner {
+    position: relative;
+    width: 100vw;
+    height: 190px;
+    background-image: url('../images/header-banner.jpg'); /* Path to your banner image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.banner-heading h1 {
+    text-align: center;
+    font-size: 48px;
+    color: black; /* Text color */
+    margin: 0; /* Remove margins */
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+}
+
+/* Events Section */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Space between event cards */
+    justify-content: center; /* Center align the cards */
+    padding: 40px;
+}
+
+/* Event Card Styling */
+.event-card {
+    width: 300px; /* Fixed width for uniformity */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures image fits inside the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    background: #ffffff; /* White background for the card */
+    display: flex; /* Flexbox for vertical stacking */
+    flex-direction: column; /* Stack children vertically */
+    text-align: center; /* Center align text */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for transform and shadow */
+}
+
+/* Hover Effect */
+.event-card:hover {
+    transform: translateY(-10px); /* Moves the card upwards */
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.6); /* Blue glow effect */
+}
+
+/* Title Styling */
+.event-info h2 {
+    font-size: 24px; /* Title size */
+    margin: 15px 0; /* Spacing above and below title */
+    color: #333; /* Dark color for the title */
+}
+
+/* Image Styling */
+.event-card img {
+    width: 100%; /* Full width */
+    height: 180px; /* Fixed height for images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Event Info Styling */
+.event-info {
+    padding: 15px;
+    flex-grow: 1; /* Allows content to grow and fill space */
+}
+
+.event-info p {
+    font-size: 14px; /* Description size */
+    color: #666; /* Light gray color for text */
+    margin: 5px 0; /* Spacing between paragraphs */
+}
+
+/* Button Styling */
+/* Button Styling */
+.btn-register {
+    display: inline-block; /* Inline block for the button */
+    padding: 10px 20px; /* Padding for button */
+    margin-top: 10px; /* Space above button */
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%); /* Gradient background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners for button */
+    font-size: 16px; /* Button font size */
+    border: none; /* No border */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition effects */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+.btn-register:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Darker gradient on hover */
+    transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+
+
+/*=========================================================================================*/
+/* WAYS TO DONATE PAGE */
+.donation-container {
+    display: flex; /* Use Flexbox to arrange cards side by side */
+    justify-content: space-between; /* Space evenly between the cards */
+    flex-wrap: wrap; /* Wrap cards on smaller screens */
+    gap: 20px; /* Space between cards */
+    margin: 30px auto; /* Center the container and add space */
+    max-width: 1200px; /* Limit the width for better readability */
+}
+
+/* Card Styles */
+.donation-card {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for raised effect */
+    width: calc(33.333% - 20px); /* Make three cards fit in a row */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    margin-bottom: 20px; /* Add space between rows */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition for shadow and transform */
+    box-sizing: border-box; /* Include padding and border in the width and height calculations */
+}
+
+/* Hover Effect for Blue Glow */
+.donation-card:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.6); /* Blue glow effect on hover */
+    transform: translateY(-5px); /* Slight lift effect */
+}
+
+/* Header Section */
+.donation-card-content {
+    padding: 10px; /* Padding around content */
+}
+
+/* Card Title and Date/Location */
+.donation-details h2 {
+    font-size: 20px; /* Title font size */
+    margin: 0 0 10px 0; /* Space below title */
+    color: #333; /* Dark gray color for title */
+}
+
+.donation-details .date-location {
+    font-size: 14px; /* Smaller font for date/location */
+    color: #777; /* Lighter gray color */
+}
+
+/* Image Section */
+.donation-image {
+    width: 100%; /* Full width */
+    height: auto;
+}
+
+.donation-image img {
+    width: 100%; /* Full width of the container */
+    height: 70%; /* Maintain aspect ratio */
+    border-radius: 5px;
+}
+
+/* Text Content */
+.donation-details p {
+    margin: 10px 0; /* Space above and below description */
+    color: #555; /* Medium gray color for description text */
+}
+
+/* Button Styling */
+.donate-button {
+    display: inline-block; /* Button styling */
+    width: 100%; /* Make sure the button width fits the container */
+    padding: 10px 0; /* Adjust padding */
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%); /* Gradient background */
+    color: white; /* White text */
+    text-decoration: none; /* No underline */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text */
+    font-weight: bold; /* Bold text */
+    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.donate-button:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%); /* Darker gradient on hover */
+}
+
+/* Progress Bar */
+.progress-bar {
+    background-color: #e0e0e0; /* Light gray background for the bar */
+    border-radius: 5px; /* Rounded corners for the progress bar */
+    height: 10px; /* Height of the progress bar */
+    margin: 10px 20px; /* Margin around the bar */
+    overflow: hidden; /* Prevent overflow */
+}
+
+.progress {
+    background-color: #007bff; /* Blue color for progress */
+    height: 100%; /* Fill the height of the progress bar */
+    transition: width 0.3s; /* Smooth transition for width change */
+}
+
+/* Raised Goal Information */
+.raised-goal {
+    padding: 10px 20px; /* Padding for raised goal info */
+    font-size: 14px; /* Smaller font size */
+    color: #333; /* Dark gray color */
+    display: flex; /* Flexbox layout for space between elements */
+    justify-content: space-between; /* Space between raised and goal amounts */
+}
+
+/*========================================================================================*/
+/* DONATION FORM */
+/* Banner Section Styling */
+.banner {
+    background-color: white;
+    width: 100vw;
+    height: 9vw;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 0.2%;
+}
+
+.banner h2 {
+    font-size: 30px;
+    text-align: center;
+    color: #333;
+}
+
+/* Donation Form and Image Section */
+.donation-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    margin: 40px auto;
+    width: 80%;
+    padding: 0; /* Remove any padding */
+}
+
+/* Image Section */
+.image-container {
+    flex: 1;
+    text-align: center;
+    margin: 0; /* Remove left and right margins */
+}
+
+.donation-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0; /* No rounded corners */
+    width: 100%; /* Full width to fill the container */
+    height: 70%; /* Adjust this as needed */
+}
+
+/* Form Section */
+.form-container {
+    flex: 1;
+    background-color: white;
+    padding: 20px; /* Padding inside the form */
+    border-radius: 3; /* No rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 0; /* Remove left margin */
+}
+
+.form-container h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-right: 0; /* Remove right margin */
+}
+
+.form-group {
+    margin-bottom: 20px; /* Increase space between form fields */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px; /* Increased padding for better spacing */
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px; /* Optional: Add slight rounding */
+    box-sizing: border-box; /* Ensure padding does not increase width */
+}
+
+.form-group textarea {
+    height: 100px; /* Fixed height for textarea */
+    resize: vertical; /* Allow vertical resizing only */
+}
+
+.donate-button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 18px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px; /* Keep rounded corners for the button */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.donate-button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+/*=========================================================================================*/
+/* VOLUNTEER PAGE STYLING */
+.volunteer-headerr {
+    position: relative;
+    width: 100vw;
+    height: 190px;
+    background-image: url('../images/header-banner.jpg'); /* Path to your banner image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -19px;
+}
+
+.volunteer-headerr h1 {
+    text-align: center;
+    font-size: 48px;
+    color: black; /* Text color */
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+}
+
+/* Volunteer Section Styles */
+#volunteer-section {
+    padding: 20px; /* Add padding around the section */
+}
+
+/* Volunteer Content Layout */
+.volunteer-content {
+    display: flex; /* Flexbox layout for form and image */
+    align-items: flex-start; /* Align items to the start */
+    width: 100%; /* Full width */
+}
+
+/* Image Styles */
+.volunteer-image {
+    flex: 1; /* Takes up remaining space on the left */
+    padding-right: 15px; /* Space between form and image */
+}
+
+.volunteer-image img {
+    width: 100%; /* Full width image */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover for image */
+    border-radius: 0px; /* Rounded corners for the image */
+}
+
+/* Form Styles */
+.volunteer-form {
+    flex: 1; /* Takes up more space on the right */
+    padding: 20px; /* Padding for form */
+}
+
+.volunteer-form h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 30px; /* Space below title */
+    color: black; /* Dark text color */
+}
+
+/* Form Group Styles */
+.vform-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.vform-group label {
+    display: block; /* Block level label */
+    margin-bottom: 5px; /* Space below label */
+    color: black; /* Dark text color */
+}
+
+.vform-group input {
+    width: 98%; /* Full width fields */
+    padding: 10px; /* Padding for input */
+    border-radius: 0px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+/* Submit Button Styles */
+.vbtn-submit {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%);
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+    margin-top: 20px; /* Space above button */
+}
+
+.vbtn-submit:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%);
+}
+
+/*=========================================================================================*/
+/*CONTACT PAGE*/
+.ccontact-header {
+    position:relative;
+    width: 100vw;
+    height: 190px;
+    background-image: url('../images/header-banner.jpg'); /* Path to your banner image */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: -19px;
+}
+
+.ccontact-header h1 {
+    text-align: center;
+    font-size: 48px;
+    color: black; /* Text color */
+    text-decoration: underline;
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact Section Styles */
+#contact-section {
+    padding: 20px; /* Add padding around the section */
+}
+
+.ccontact-content {
+    display: flex; /* Flexbox layout for form and image */
+    width: 100%; /* Full width */
+}
+
+/* Form Styles */
+.ccontact-form {
+    margin-left: 10px;
+    flex: 1; /* Takes up remaining space on the left */
+    padding: 20px; /* Padding for form */ 
+    margin-right: 20px; /* Space between form and image */
+}
+
+.ccontact-form h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-bottom: 20px; /* Space below title */
+    color: black; /* Dark text color */
+}
+
+.fform-group {
+    margin-bottom: 15px; /* Space between form fields */
+}
+
+.fform-group label {
+    display: block; /* Block level label */
+    margin-bottom: 5px; /* Space below label */
+    color: black; /* Lighter text color */
+}
+
+.fform-group input,
+.fform-group textarea {
+    width: 100%; /* Full width fields */
+    padding: 10px; /* Padding for input */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size */
+}
+
+.fform-group textarea {
+    height: 100px; /* Fixed height for textarea */
+}
+
+.btn-submit {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%);
+    color: white; /* White text color */
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 16px; /* Font size */
+}
+
+.btn-submit:hover {
+    background: linear-gradient(171.8deg, rgb(5, 111, 146) 13.5%, rgb(6, 57, 84) 78.6%);
+}
+
+/* Image Styles */
+.ccontact-image {
+    flex: 1; /* Takes up remaining space on the right */
+    padding-left: 20px; /* Space between form and image */
+}
+
+.ccontact-image img {
+    width: 98%; /* Full width image */
+    object-fit: cover;
+    height: 100%; /* Cover for image */
+}
+
+
+
+
+
+
+
+
+
+
+
+/*============================================================================================*/
+/* Footer section styling */
+.footer {
+    background-color: #1c1c1c; /* Dark background */
+    padding: 50px 0;
+    color: #fff; /* White text */
+}
+
+.footer .boxx-container {
+    display: flex;
+    justify-content: space-between; /* Space between the boxes */
+    flex-wrap: wrap; /* Wraps boxes on smaller screens */
+    max-width: 1200px; /* Restrict the maximum width of the container */
+    margin: 0 auto; /* Center the content */
+}
+
+.footer .boxx {
+    flex-basis: 22%; /* Each box will take up around 22% of the width */
+    min-width: 200px; /* Ensure minimum width to maintain box structure */
+    margin: 10px 0; /* Add some vertical spacing between boxes */
+}
+
+.footer .boxx h3 {
+    color: white; /* Heading color */
+    font-size: 20px;
+    margin-bottom: 15px;
+    text-transform: uppercase; /* Capitalized headings */
+}
+
+.footer .boxx a {
+    color: #bbb; /* Lighter grey color for links */
+    text-decoration: none;
+    display: block;
+    margin: 10px 0;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer .boxx a:hover {
+    text-decoration: underline;
+    color: white; /* Hover color */
+}
+
+/* Reduced spacing for the p tag */
+.footer .boxx p {
+    margin: 5px 0; /* Reduced margin */
+    font-size: 16px;
+}
+
+.footer .boxx i {
+    margin-right: 10px;
+    color: white; /* Icons color */
+}
+
+/* Social media icons */
+.footer .boxx a i {
+    margin-right: 8px;
+    font-size: 18px;
+}
+
+/* Styling for the credit text */
+.footer .credit {
+    text-align: center; /* Center the copyright text */
+    margin-top: 15px;
+    margin-bottom: 0.1px; /* Reduced margin */
+    font-size: 14px;
+    color: #bbb; /* Light grey text */
+    padding-top: 10px; /* Reduced padding */
+    border-top: 1px solid #444; /* Add a top border to separate it */
+}
+
+
+
+/* Media query for responsiveness */
+@media (min-width: 768px) {
+    .about-content {
+        flex-direction: row; /* Row layout on larger screens */
+        justify-content: center; /* Center align content horizontally */
+    }
+    .mission-vision .flex {
+        flex-direction: column;
+    }
+
+    .mission-vision .image img {
+        width: 100%; /* Full width on small screens */
+        margin-bottom: 20px;
+    }
+
+    .how-your-money p {
+        padding: 0 20px; /* Add padding for smaller screens */
+    }
+
+    .about-text {
+        margin-right: 20px; /* Space between text and image */
+        text-align: left; /* Left align text */
+    }
+    .footer .box-container {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .footer .box {
+        margin-bottom: 20px;
+    }
+}

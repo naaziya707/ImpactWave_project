@@ -1,0 +1,134 @@
+{% extends "u_base.html" %}
+
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<section id="about-us">
+    <div class="heading">
+        <h3>About Us</h3>
+    </div>
+
+    <div class="mission">
+        <div class="flex">
+            <div class="text">
+                <h2>Our Mission</h2>
+                <p>At ImpactWave, our mission is to empower individuals and communities through impactful contributions that create lasting change. We strive to provide unparalleled service to our supporters, ensuring every donation directly transforms lives and uplifts those in need. By fostering transparency, accountability, and collaboration, we aim to inspire a global movement of compassion and generosity, turning aspirations into actions. Together, we are committed to building a brighter, more equitable future, where everyone has the opportunity to thrive.</p>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/mission.jpg') }}" alt="Our Mission">
+            </div>
+        </div>
+        </div>
+        <div class="vision">
+         <div class="flexx">
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/vision.jpg') }}" alt="Our Vision">
+            </div>
+            <div class="text">
+                <h3>Our Vision</h3>
+                <p>Our vision is to create a world where everyone can contribute to meaningful change. We strive to be a leader in inspiring compassion and collaboration, helping individuals and communities achieve their goals. By fostering partnerships and embracing innovation, we aim to empower people to overcome challenges and build a brighter future. Together, we envision a future where every person has access to opportunities and the support they need to thrive.
+
+                </p>
+            </div>
+        </div>
+    </div>
+    </section>
+
+    <section class="how-your-money">
+        <h1 class="title">How Your Money is Spent</h1>
+        <p>At ImpactWave, we are deeply committed to transparency and accountability. We understand that every donation you make carries a story and a promise to uplift lives. Here’s a clear breakdown of how we allocate your generous contributions:</p>
+        
+        <ul class="money-spent-list">
+            <li><strong>Empowering Communities:</strong>
+                <ul>
+                    <li>We invest directly in local initiatives that empower underserved communities, ensuring that your donations lead to tangible improvements in their lives.</li>
+                    <li>Our support extends to educational programs that equip individuals with essential skills for better employment opportunities.</li>
+                </ul>
+            </li>
+            <li><strong>Enhancing Health and Well-being:</strong>
+                <ul>
+                    <li>Your contributions help provide access to vital healthcare services for those who might otherwise go without, ensuring everyone has the opportunity for a healthier life.</li>
+                    <li>We also support mental health initiatives that promote well-being and resilience in our communities.</li>
+                </ul>
+            </li>
+            <li><strong>Promoting Environmental Sustainability:</strong>
+                <ul>
+                    <li>We are dedicated to protecting our planet by funding projects that encourage eco-friendly practices and sustainable living.</li>
+                    <li>Your donations support reforestation efforts and wildlife conservation initiatives, helping to preserve our natural resources for future generations.</li>
+                </ul>
+            </li>
+            <li><strong>Swift Disaster Relief:</strong>
+                <ul>
+                    <li>In times of crisis, we mobilize quickly to provide essential aid and support to communities affected by natural disasters, ensuring your contributions reach those in urgent need.</li>
+                    <li>We collaborate with local organizations to deliver effective and efficient relief efforts, maximizing the impact of your generosity.</li>
+                </ul>
+            </li>
+            <li><strong>Supporting Operational Excellence:</strong>
+                <ul>
+                    <li>A portion of your donations goes towards our operational costs, enabling us to maintain high standards in our services and outreach efforts.</li>
+                    <li>We invest in technology and resources that enhance our efficiency and effectiveness in delivering assistance.</li>
+                </ul>
+            </li>
+            <li><strong>Commitment to Monitoring and Evaluation:</strong>
+                <ul>
+                    <li>We prioritize accountability by implementing systems that track the impact of our programs, ensuring your contributions make a real difference.</li>
+                    <li>Our ongoing assessments and improvements help us refine our strategies, maximizing the effectiveness of every dollar you give.</li>
+                </ul>
+            </li>
+        </ul>
+    
+        <p>Your trust and support are invaluable to us. Together, we can create lasting change and build a brighter future for individuals and communities in need. Thank you for being an essential part of our mission!</p>
+    </section>
+    
+
+    <section class="faqs">
+        <h1 class="title">Frequently Asked Questions</h1>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>How can I contact customer support?</h3>
+                <span class="toggle-icon">▼</span> <!-- Downward arrow -->
+            </div>
+            <p class="faq-answer" style="display: none;">You can reach our customer support team via our contact page. Our dedicated support representatives are available to assist you with any questions or concerns you may have regarding our services or donations.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>What types of donations are accepted?</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <p class="faq-answer" style="display: none;">We accept donations in various forms, including monetary contributions, supplies, and volunteer time. Your generosity helps us support ongoing programs and initiatives aimed at uplifting communities in need.</p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>How can I get involved?</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <p class="faq-answer" style="display: none;">You can get involved by volunteering, donating, or spreading the word about our initiatives. Every contribution, whether time or resources, makes a significant impact on the lives of those we serve.</p>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>How is my donation used?</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <p class="faq-answer" style="display: none;">Your donation is used to directly support our programs and initiatives aimed at empowering individuals and communities. We ensure that funds are allocated transparently and effectively, maximizing the impact of every contribution.
+            </p>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleAnswer(this)">
+                <h3>What projects are currently supported by ImpactWave?</h3>
+                <span class="toggle-icon">▼</span>
+            </div>
+            <p class="faq-answer" style="display: none;">ImpactWave supports various projects focused on community development, education, health initiatives, and environmental sustainability. We regularly update our website with details about ongoing and upcoming projects, allowing you to see the direct impact of your contributions.</p>
+        </div>
+    </section>
+    
+    
+    <script src="{{ url_for('static', filename='scripts/scripts.js') }}"></script>
+    
+
+{% include 'footer.html' %}
+{% endblock %}

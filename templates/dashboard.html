@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Dashboard</h1>
+    <div class="container">
+            <div class="box">
+                <h2>Number of Admins</h2>
+                <p>{{ admin_user_count }}</p>
+            </div>
+            <div class="box">
+               <h2>Number of Normal Users</h2>
+                <p>{{ normal_user_count }}</p>
+            </div>
+            <div class="box">
+                <h2>Local events nearby</h2>
+                <p>{{ events_posted }}</p>
+            </div>
+            <div class="box">
+                <h2>Tickets purchased</h2>
+                <p>{{ event_registrations }}</p>
+            </div>
+            <div class="box">
+                <h2>Total Donations</h2>
+                <p>${{ total_donations }}</p>
+            </div>
+            <div class="box">
+                <h2>Messages</h2>
+                <p>{{ message_count }}</p>
+            </div>
+    </div>
+{% endblock %}

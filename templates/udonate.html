@@ -1,0 +1,134 @@
+{% extends "u_base.html" %}
+
+{% block content %}
+
+<section id="events-banner">
+    <div class="banner-heading">
+        <h1>Ways to Donate</h1>
+    </div>
+</section>
+
+<div class="donation-container">
+    <!-- Card 1: Menstruation Poverty -->
+    <div class="donation-card">
+        <div class="donation-card-content">
+            <div class="donation-image">
+            <img src="{{ url_for('static', filename='images/menstral-period.jpeg') }}" alt="Menstruation Poverty">
+            </div>
+            <div class="donation-details">
+                <h2>Menstruation Poverty</h2>
+                <p class="description">Many girls and women around the world lack access to essential sanitary products, leading to significant health issues, missed school days, and social stigma. Donate now to help provide period products and promote menstrual hygiene education. Your contribution can make a real difference in the lives of countless women and girls.
+                    </p>
+                <!-- Use `url_for` to generate the donation form URL with the cause name -->
+                <a href="{{ url_for('donation_form', cause_name='Menstruation Poverty') }}" class="donate-button">Donate Now</a>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 40%;"></div>
+        </div>
+        <div class="raised-goal">
+            <p>Raised: Rs 56,880</p>
+            <p>Goal: Rs 70,000</p>
+        </div>
+    </div>
+
+    <!-- Card 2: Access to Clean Water -->
+    <div class="donation-card">
+        <div class="donation-card-content">
+            <img src="{{ url_for('static',filename = 'images/clean-water.jpeg') }}" alt="Access to Clean Water" class="donation-image">
+            <div class="donation-details">
+                <h2>Access to Clean Water</h2>
+                <p class="description">Lack of access to clean water is a major global health crisis, affecting billions of people worldwide. Your donation supports initiatives that build wells, install water filters, and promote sanitation practices. Help us bring clean water to communities in need and improve their health and well-being.</p>
+                <a href="{{ url_for('donation_form', cause_name='Access to Clean Water') }}" class="donate-button">Donate Now</a>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 73%;"></div>
+        </div>
+        <div class="raised-goal">
+            <p>Raised: Rs 59,880</p>
+            <p>Goal: Rs 70,000</p>
+        </div>
+    </div>
+
+    <!-- Card 3: Empowering the Differently Abled -->
+    <div class="donation-card">
+        <div class="donation-card-content">
+            <img src="{{ url_for('static', filename='images/disable.png') }}" alt="Empowering the Differently Abled" class="donation-image">
+            <div class="donation-details">
+                <h2>Empowering the Differently Abled</h2>
+                <p class="description">Empower individuals with disabilities to reach their full potential by providing them with the tools, resources, and support they need. Your donation can help fund educational programs, vocational training, and accessibility initiatives, enabling people with disabilities to live more independent and fulfilling lives.</p>
+                <a href="{{ url_for('donation_form', cause_name='Empowering the Differently Abled') }}" class="donate-button">Donate Now</a>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 33%;"></div>
+        </div>
+        <div class="raised-goal">
+            <p>Raised: Rs 36,880</p>
+            <p>Goal: Rs 90,000</p>
+        </div>
+    </div>
+
+    <!-- Card 4: Disaster Relief & Recovery -->
+    <div class="donation-card">
+        <div class="donation-card-content">
+            <img src="{{ url_for('static', filename='images/disaster.png') }}" alt="Disaster Relief & Recovery" class="donation-image">
+            <div class="donation-details">
+                <h2>Disaster Relief & Recovery</h2>
+                <p class="description">Provide critical aid to communities affected by natural disasters such as floods, earthquakes, and cyclones. Your support helps deliver emergency relief, rebuild infrastructure, and restore hope to those devastated by nature’s forces.</p>
+                <a href="{{ url_for('donation_form', cause_name='Disaster Relief & Recovery') }}" class="donate-button">Donate Now</a>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 86%;"></div>
+        </div>
+        <div class="raised-goal">
+            <p>Raised: Rs 56,880</p>
+            <p>Goal: Rs 70,000</p>
+        </div>
+    </div>
+
+    <!-- Card 5: Animal welfare -->
+    <div class="donation-card">
+        <div class="donation-card-content">
+            <img src="{{ url_for('static', filename='images/animal.jpg') }}" alt="Animal welfare" class="donation-image">
+            <div class="donation-details">
+                <h2>Animal welfare</h2>
+                <p class="description">Our welfare programs focus on rescuing abandoned and abused animals,
+                    providing them with shelter, medical care, and love. Join us in giving a voice to the
+                    voiceless and ensuring a brighter future for all creatures! Donate for them</p>
+                <a href="{{ url_for('donation_form', cause_name='Animal welfare') }}" class="donate-button">Donate Now</a>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 63%;"></div>
+        </div>
+        <div class="raised-goal">
+            <p>Raised: Rs 56,880</p>
+            <p>Goal: Rs 70,000</p>
+        </div>
+    </div>
+
+    <!-- Card 5: Animal welfare -->
+    <div class="donation-card">
+        <div class="donation-card-content">
+            <img src="{{ url_for('static', filename='images/event6.jpg') }}" alt="Elder care" class="donation-image">
+            <div class="donation-details">
+                <h2>Elder care</h2>
+                <p class="description">Donate to ensure a brighter future for our elders. Many seniors face isolation, financial hardship, and declining health. Your generous donation will help provide essential service affordable housing, ensuring they live with dignity.</p>
+                <a href="{{ url_for('donation_form', cause_name='Elder care') }}" class="donate-button">Donate Now</a>
+            </div>
+        </div>
+        <div class="progress-bar">
+            <div class="progress" style="width: 73%;"></div>
+        </div>
+        <div class="raised-goal">
+            <p>Raised: Rs 56,880</p>
+            <p>Goal: Rs 1,00,000</p>
+        </div>
+    </div>
+</div>
+
+{% include 'footer.html' %}
+{% endblock %}

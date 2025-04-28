@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>Users</h1>
+    <div class="users-container">
+        {% for user in users %}
+            <div class="user-box">
+                <p class="label"><strong>Username:</strong> <span class="value">{{ user.username }}</span></p>
+                <p class="label"><strong>Email:</strong> <span class="value">{{ user.email }}</span></p>
+                <form action="{{ url_for('delete_user', id=user.id) }}" method="POST">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+        {% else %}
+            <p>No users found</p>
+        {% endfor %}
+    </div>
+{% endblock %}

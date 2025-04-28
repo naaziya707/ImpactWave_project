@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="event-section">
+    <!-- Event Form -->
+    <h1>EVENTS</h1>
+    <div class="form-container">
+        <form method="POST" action="{{ url_for('events') }}" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            
+            <div class="form-group">
+                <label for="title">Title:</label>
+                {{ form.title(class="input-box") }}
+            </div>
+
+            <div class="form-group">
+                <label for="image">Image:</label>
+                {{ form.image(class="input-box") }}
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                {{ form.description(class="input-box") }}
+            </div>
+
+            <div class="form-group">
+                <label for="date">Date:</label>
+                {{ form.date(class="input-box") }}
+            </div>
+
+            <div class="form-group">
+                <label for="location">Location:</label>
+                {{ form.location(class="input-box") }}
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Add Event" class="btn">
+            </div>
+        </form>
+    </div>
+
+    <div class="events-container">
+        {% for event in events %}
+        <div class="event-box">
+            <div class="event-details">
+                <img src="{{ url_for('static', filename='images/' + event.image) }}" alt="Event Image" class="event-image">
+                <h3>{{ event.title }}</h3>
+                <p>{{ event.description }}</p>
+                <div class="event-date">
+                    {% if event.date %}
+                        {{ event.date.strftime('%Y-%m-%d') }}
+                    {% else %}
+                        Date not available
+                    {% endif %}
+                </div>
+                <div class="event-location">{{ event.location }}</div>
+                {% if event.image %}
+                
+                {% endif %}
+                <div class="event-actions">
+                    <!-- Link to the Update Event page -->
+<a href="{{ url_for('update_event', event_id=event.id) }}" class="btn btn-update">Update</a>
+
+<!-- Form for deleting the event -->
+<form action="{{ url_for('delete_event', event_id=event.id) }}" method="POST">
+    <button type="submit" class="btn btn-delete">Delete</button>
+</form>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

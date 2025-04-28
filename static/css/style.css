@@ -1,0 +1,423 @@
+/* General body styling */
+body {
+    background-size: contain;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Navigation styling */
+nav {
+    background-color: black;
+    padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+}
+
+/* Container within navigation */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* Logo styling */
+.logo {
+    flex-shrink: 0;
+}
+
+.logo-text {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/* Navigation menu styling */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+}
+
+.nav-menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.nav-menu a:hover {
+    text-decoration: underline;
+}
+
+/* LOGOUT BUTTON STYLING */
+/* Logout icon styling */
+.logout-icon {
+    font-size: 24px; /* Adjust the size as needed */
+    color: #fff; /* Set the icon color to white */
+    text-decoration: none;
+    margin-left: auto;
+}
+
+.logout-icon:hover {
+    color: #ddd; /* Optional: Change color on hover for better visibility */
+}
+
+/* ADMIN PANEL TITLE STYLING */
+h1 {
+    margin-top: 0.1px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 3.5em;
+    text-decoration: underline;
+    color: #333;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+/* Dashboard page specific styles */
+.container {
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    gap: 20px;
+    justify-content: center;
+}
+/* Box styling */
+.box {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    min-width: 280px;
+    height: 180px;
+}
+.box h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #007bff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.box p {
+    font-size: 1.6em;
+    color: #333;
+    margin: 0;
+}
+
+/* USERS DASHBOARD STYLING */
+/* Container for user boxes */
+.users-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+/* Individual user box styling */
+.user-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 400px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 22px;
+}
+
+.user-box .label {
+    color: red;
+}
+
+.user-box .value {
+    color: #000;
+}
+
+.user-box button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.user-box button:hover {
+    background-color: #c82333;
+}
+
+/* DONATION PAGE STYLING */
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+/* Table Header Styling */
+thead {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%);
+    color: white;
+}
+th {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 2px solid #000;
+    border-top: 2px solid #000;
+    font-size: 18px;
+}
+/* Table Body Styling */
+tbody tr {
+    border-bottom: 1px solid #ddd;
+}
+td {
+    padding: 12px;
+    border-right: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+}
+tbody tr td:last-child {
+    border-right: none;
+}
+tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/*EVENTS*/
+.event-section {
+    padding: 20px;
+}
+.event-section h1{
+    margin-top: 0.0px;
+    margin-bottom: 0.5px;
+    text-align: center;
+    font-size: 3em;
+    text-decoration: underline;
+    color: #333;
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Form Elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.input-box {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn {
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn:hover{
+    background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(167, 2, 2) 91.1%);
+}
+/* Event Boxes */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.event-box {
+    margin-top: 30px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 250px; /* Adjust width to fit 4 items per row with margin */
+    background-color: #f9f9f9;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.event-details {
+    padding: 15px;
+}
+
+.event-actions {
+    margin-top: 10px;
+    display: flex; /* Align buttons side by side */
+    gap: 10px; /* Space between buttons */
+}
+
+.btn-update,
+.btn-delete {
+    background: black;
+}
+
+.btn-update {
+    background: linear-gradient(112.2deg, rgb(86, 223, 223) 4.7%, rgb(2, 28, 186) 110.1%);
+}
+.btn-update:hover {
+    background: linear-gradient(112.2deg, rgb(1, 86, 86) 4.7%, rgb(1, 14, 102) 110.1%);
+}
+
+.btn-delete {
+    background: black;
+}
+.btn-delete:hover{
+    background: linear-gradient(107.2deg, rgb(150, 15, 15) 10.6%, rgb(167, 2, 2) 91.1%);
+}
+
+.event-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+/*messages*/
+.messages-container {
+    display: flex;
+    flex-direction: column; /* Make the container a column */
+    align-items: center; /* Center the grid */
+    padding: 20px; /* Add some padding around the container */
+}
+
+.messages-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* Three equal columns */
+    gap: 20px; /* Space between the grid items */
+    width: 100%; /* Full width of the container */
+    max-width: 1200px; /* Optional: limit the max width */
+}
+
+.message-box {
+    background-color: #f8f9fa; /* Light background color */
+    border: 1px solid #ced4da; /* Border color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Internal padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    justify-content: space-between; /* Space out items */
+    height: 200px; /* Set a fixed height for uniformity */
+}
+
+.message-item {
+    display: flex;
+    justify-content: space-between; /* Align label and value */
+    margin-bottom: 10px; /* Space between each item */
+}
+
+.label {
+    font-weight: bold; /* Bold labels */
+}
+
+.value {
+    margin-left: 10px; /* Space between label and value */
+}
+
+.btn-danger {
+    margin-top: auto; /* Push the button to the bottom */
+}
+
+
+
+
+
+/* LINK STYLING */
+p {
+    text-align: center;
+    margin-top: 20px;
+}
+p a {
+    color: #5100ff;
+    text-decoration: none;
+}
+p a:hover {
+    text-decoration: underline;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box {
+        width: 80%;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    .box h2 {
+        font-size: 1.3em;
+    }
+
+    .box p {
+        font-size: 1em;
+    }
+
+    .form-container {
+        padding: 15px;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="password"] {
+        padding: 8px;
+    }
+}
+@media (max-width: 480px) {
+    .box {
+        flex: 1 1 100%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}

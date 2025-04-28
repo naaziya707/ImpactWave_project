@@ -1,0 +1,101 @@
+{% extends "u_base.html" %}
+{% block content %}
+
+<section id="events-banner">
+    <div class="banner-heading">
+        <h1>Donation Form</h1>
+    </div>
+</section>
+
+<div class="donation-container">
+    <div class="form-container">
+        <h2>You are supporting the {{ cause_name }} cause</h2>
+        
+        
+        <!-- Donation Form -->
+        <form action="{{ url_for('donation_form', cause_name=cause_name) }}" method="POST">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Donation Amount</label>
+                <input type="number" id="amount" name="amount" required>
+            </div>
+            
+            <!-- Payment Method Dropdown -->
+            <div class="form-group">
+                <label for="payment-method">Payment Method</label>
+                <select id="payment-method" name="payment_method" required>
+                    <option value="credit_card">Credit/Debit Card</option>
+                    <option value="upi">UPI</option>
+                    <option value="paypal">PayPal</option>
+                    <option value="bank_transfer">Bank Transfer</option>
+                </select>
+            </div>
+            
+            <!-- Card Details (visible only for card payments) -->
+            <div id="card-details" style="display:none;">
+                <div class="form-group">
+                    <label for="card-number">Card Number</label>
+                    <input type="text" id="card-number" name="card_number" pattern="\d{16}" placeholder="XXXX XXXX XXXX XXXX">
+                </div>
+                <div class="form-group">
+                    <label for="expiry-date">Expiry Date</label>
+                    <input type="text" id="expiry-date" name="expiry_date" placeholder="MM/YY">
+                </div>
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" pattern="\d{3}">
+                </div>
+            </div>
+
+            
+            <!-- Donation Confirmation -->
+            <div class="form-group">
+                <input type="checkbox" id="confirm" name="confirm" required>
+                <label for="confirm">I confirm my donation and accept the terms and conditions.</label>
+            </div>
+
+            <!-- Donation Summary -->
+            <div class="donation-summary">
+                <h3>Donation Summary</h3>
+                <p>Cause: {{ cause_name }}</p>
+                <p>Amount: ₹<span id="summary-amount">0</span></p>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="donate-button">Donate Now</button>
+        </form>
+    </div>
+
+    <div class="image-container">
+        <img src="{{ url_for('static', filename='images/1donation-form.jpg') }}" alt="Donation Image" class="donation-image">
+    </div>
+</div>
+
+
+<!-- Include Footer -->
+{% include 'footer.html' %}
+
+<script>
+    document.getElementById('payment-method').addEventListener('change', function() {
+        const cardDetails = document.getElementById('card-details');
+        if (this.value === 'credit_card') {
+            cardDetails.style.display = 'block';
+        } else {
+            cardDetails.style.display = 'none';
+        }
+    });
+    
+    // Update summary when amount is entered
+    document.getElementById('amount').addEventListener('input', function() {
+        document.getElementById('summary-amount').innerText = this.value;
+    });
+</script>
+
+{% endblock %}

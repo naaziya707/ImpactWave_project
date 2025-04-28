@@ -1,0 +1,36 @@
+{% extends "u_base.html" %}
+
+{% block content %}
+
+<!-- Events Banner -->
+<section id="events-banner">
+    <div class="banner-heading">
+        <h1>Upcoming Events</h1>
+    </div>
+</section>
+
+<!-- Events Section -->
+<section id="events-list" class="container">
+    <div class="events-container">
+        {% for event in events %}
+        <div class="event-card">
+            <img src="{{ url_for('static', filename='images/' ~ event.image) }}" alt="{{ event.title }}">
+            <div class="event-info">
+                <h2>{{ event.title }}</h2>
+                <p>{{ event.description }}</p>
+                <p><strong>Location:</strong> {{ event.location }}</p>
+                <p><strong>Date:</strong> {{ event.date.strftime('%Y-%m-%d') }}</p>
+            
+                <button type="button" class="btn btn-submit" onclick="location.href='{{ url_for('volunteer_form', event_id=event.id) }}'">Register Now</button>
+
+
+            </div>
+        </div>
+        {% else %}
+        <p>No upcoming events at the moment.</p>
+        {% endfor %}
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}

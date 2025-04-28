@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}TheCharity{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <!-- Navbar (included on every page) -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="{{ url_for('homepage') }}">ImpactWave</a>
+            </div>
+            <div class="nav-links">
+                <a href="{{ url_for('homepage') }}">Home</a>
+                <a href="{{ url_for('uabout') }}">About Us</a>
+                <a href="{{ url_for('uevents') }}">Events</a>
+                <a href="{{ url_for('udonate') }}">Ways to Donate</a>
+                <a href="{{ url_for('ucontact') }}">Contact</a>
+                <div class="nav-right">
+                    <button type="button" onclick="location.href='{{ url_for('udonate') }}'">Donate Now</button>
+                    <a href="{{ url_for('logout') }}" class="logout-icon"><i class="fas fa-sign-out-alt"></i></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        {% block content %}
+        <!-- Content specific to each page will go here -->
+        {% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', filename='scripts/scripts.js') }}" defer></script>
+</body>
+</html>

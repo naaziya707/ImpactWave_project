@@ -1,0 +1,93 @@
+{% extends "u_base.html" %}
+
+{% block content %}
+
+<!-- Internal CSS for Flash Messages -->
+<style>
+    /* Flash message styling */
+    .flashes {
+        list-style-type: none;
+        padding: 0;
+        margin: 20px 0;
+    }
+
+    .flashes li {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .flashes li.success {
+        background-color: #d4edda;
+        color: #155724;
+        border: 1px solid #c3e6cb;
+    }
+
+    .flashes li.error {
+        background-color: #f8d7da;
+        color: #721c24;
+        border: 1px solid #f5c6cb;
+    }
+
+    .flashes li.warning {
+        background-color: #fff3cd;
+        color: #856404;
+        border: 1px solid #ffeeba;
+    }
+
+    .flashes li.info {
+        background-color: #cce5ff;
+        color: #004085;
+        border: 1px solid #b8daff;
+    }
+</style>
+
+<!-- Contact Us Section -->
+<section id="contact-section">
+    <div class="ccontact-header">
+        <h1>Contact Us</h1>
+    </div>
+    
+    <div class="ccontainer">
+        <div class="ccontact-content">
+            <div class="ccontact-form">
+                <h2>Get in Touch!</h2>
+                
+                <!-- Flash Message Display -->
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                    {% if messages %}
+                        <ul class="flashes">
+                            {% for category, message in messages %}
+                                <li class="{{ category }}">{{ message }}</li>
+                            {% endfor %}
+                        </ul>
+                    {% endif %}
+                {% endwith %}
+
+                <form action="{{ url_for('ucontact') }}" method="POST">
+                    <div class="fform-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="fform-group">
+                        <label for="email">Email ID</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="fform-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-submit">Submit Message</button>
+                </form>
+            </div>
+            <div class="ccontact-image">
+                <img src="{{ url_for('static', filename='images/contact.jpg') }}" alt="Contact Us Image">
+            </div>
+        </div>
+    </div>
+</section>
+
+{% include 'footer.html' %}
+{% endblock %}
