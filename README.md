@@ -1,6 +1,6 @@
 # 🌊 ImpactWave – Relief Platform
 
-**ImpactWave** is a donation and relief management platform built using Flask and MySQL. It simplifies charitable giving, event registration, and feedback collection while ensuring security, transparency, and a user-friendly experience.
+**ImpactWave** is a donation and relief management platform built using Python Flask and MySQL. It simplifies charitable giving, event registration, and feedback collection while ensuring security, transparency, and a user-friendly experience.
 
 ## 📌 Project Overview
 ImpactWave empowers users to donate to causes, register for events, and receive instant PDF receipts. Admins can manage donations, events, and users efficiently through a secure dashboard. The platform currently operates within India, with future plans for global expansion.
